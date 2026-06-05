@@ -1,0 +1,25 @@
+# Runtime data — machine-specific, never committed
+logs/errors.md
+logs/config.md
+logs/*-activity.md
+
+# Scan output and archives
+FRST/archive/
+FRST/fixlists/
+FRST/pending/
+HitmanPro/archive/
+AdwCleaner/archive/
+MalwareBytes/archive/
+WinDefender/archive/
+
+# Keep placeholder files in tracked archive dirs
+!**/archive/.gitkeep
+
+# Machine-specific config
+.env
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
