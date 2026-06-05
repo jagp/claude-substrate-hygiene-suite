@@ -1,0 +1,37 @@
+#!/bin/bash
+# Pre-commit hook: check staged .md files for typos using codespell
+# Install: pip install codespell
+# Activate: git config core.hooksPath .githooks
+
+STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep '\.md$')
+
+if [ -z "$STAGED_MD" ]; then
+  exit 0
+fi
+
+CODESPELL=$(command -v codespell 2>/dev/null || echo "$HOME/.local/bin/codespell")
+
+if [ ! -x "$CODESPELL" ]; then
+  echo "  ⚠  codespell not found — skipping typo check (pip install codespell to enable)"
+  exit 0
+fi
+
+echo "  Checking staged .md files for typos..."
+ERRORS=0
+
+for FILE in $STAGED_MD; do
+  RESULT=$($CODESPELL "$FILE" 2>/dev/null)
+  if [ -n "$RESULT" ]; then
+    echo "  Typos in $FILE:"
+    echo "$RESULT"
+    ERRORS=1
+  fi
+done
+
+if [ $ERRORS -ne 0 ]; then
+  echo ""
+  echo "  Fix with: codespell -w <file>  then re-stage."
+  exit 1
+fi
+
+exit 0
