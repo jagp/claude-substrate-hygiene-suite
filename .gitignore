@@ -4,13 +4,13 @@ logs/config.md
 logs/*-activity.md
 
 # Scan output and archives
-FRST/archive/
-FRST/fixlists/
-FRST/pending/
-HitmanPro/archive/
-AdwCleaner/archive/
-MalwareBytes/archive/
-WinDefender/archive/
+apps/frst/archive/
+apps/frst/fixlists/
+apps/frst/pending/
+apps/hitmanpro/archive/
+apps/adwcleaner/archive/
+apps/malwarebytes/archive/
+apps/windefender/archive/
 
 # Keep placeholder files in tracked archive dirs
 !**/archive/.gitkeep

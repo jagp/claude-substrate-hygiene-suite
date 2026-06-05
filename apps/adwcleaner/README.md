@@ -1,0 +1,7 @@
+# apps/adwcleaner/
+
+AdwCleaner scan output archives.
+
+- `archive/[yyyy-mm-dd]/` — raw scan reports (gitignored)
+
+See [`../../tools.md`](../../tools.md) · [`../../procedure.md`](../../procedure.md) §4 step 2
