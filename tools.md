@@ -8,7 +8,7 @@
 ### FRST64 (Farbar Recovery Scan Tool)
 - **Role:** System forensic scanner and repair engine
 - **Run:** Administrator — `%USERPROFILE%\Downloads\FRST64.exe`
-- **Scan output:** `FRST.txt`, `Addition.txt`, `Shortcut.txt` → archive to `./FRST/archive/[date]/`
+- **Scan output:** `FRST.txt`, `Addition.txt`, `Shortcut.txt` → archive to `./apps/frst/archive/[date]/`
 - **Fix run:** Requires `FIXLIST.txt` in same directory as exe; click "Fix"
 - **Update:** Re-download before each session (self-updates on download)
 - **Produces:** `Fixlog.txt` after fix run — archive alongside FIXLIST

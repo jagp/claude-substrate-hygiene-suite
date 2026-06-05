@@ -1,7 +1,1 @@
-# AdwCleaner/
-
-Scan output archives for AdwCleaner (Malwarebytes).
-
-- `archive/[YYYY-MM-DD]/` — raw scan reports (gitignored)
-- See [`tools.md`](../tools.md) for invocation details
-- See [`procedure.md`](../procedure.md) for where this runs in the suite (Phase 4, step 2)
+> **Relocated** → [`../apps/adwcleaner/`](../apps/adwcleaner/). Delete this directory from Windows before committing.
